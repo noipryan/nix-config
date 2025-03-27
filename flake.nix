@@ -55,6 +55,18 @@
           ];
         specialArgs = { inherit pkgs-unstable; };
         };
+        nixosConfigurations.itc-x270-01 = nixpkgs.lib.nixosSystem {
+          inherit pkgs;
+          modules = [
+            ./hosts/nixos-bios/configuration.nix
+            ./modules/env.nix
+            ./modules/localization.git
+            ./modules/packages.nix
+            ./modules/sddm.nix
+            ./modules/mate.nix
+          ];
+        specialArgs = { inherit pkgs-unstable; };
+        };
       homeConfigurations = {
         name = home-manager.lib.homeManagerConfiguration {
           inherit pkgs;
