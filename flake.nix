@@ -61,7 +61,7 @@
             ./hosts/nixos-bios/configuration.nix
             ./modules/env.nix
             ./modules/localization.nix
-	    ./modules/kvm-guest.nix
+	          ./modules/kvm-guest.nix
             ./modules/packages.nix
             ./modules/sddm.nix
             ./modules/cinnamon.nix
