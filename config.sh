@@ -22,7 +22,7 @@ sed -i "/Define a user account/a\  users.users.$NIX_USER = { \n \
     initialPassword = \"$NIX_PASSWORD\"; \n \
     extraGroups = [ \"networkmanager\" \"wheel\" \"audio\" \"input\" \"video\" ]; \n \
     packages = with pkgs; [ \n \
-    \#  thunderbird \
+    \#  thunderbird \n \
     ]; \n \
     shell = pkgs.zsh; \n \
   };" $NIX_CONFIG
@@ -47,7 +47,7 @@ nixos-enter --root /mnt -c "passwd -e $NIX_USER"
 sleep 5
 
 echo "Removing initial password from config file"
-sed -i "/initial.Password/d" $NIX_CONFIG
+sed -i "/initialPassword/d" $NIX_CONFIG
 
 echo "Nixos installation completed. Rebooting now"
 systemctl reboot
