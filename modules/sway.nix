@@ -29,6 +29,7 @@
       pkgs.wdisplays
       pkgs.adwaita-icon-theme
       pkgs.materia-kde-theme
+      pkgs.materia-gtk-theme
 
 
   ];
