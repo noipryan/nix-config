@@ -49,5 +49,5 @@ sleep 5
 echo "Removing initial password from config file"
 sed -i "/initialPassword/d" $NIX_CONFIG
 
-echo "Nixos installation completed. Rebooting now"
-systemctl reboot
+echo "Nixos installation completed."
+#systemctl reboot
