@@ -42,7 +42,7 @@ sleep 1
 
 # Create encrypted volume
 echo "Creating encrypted volume"
-cryptsetup -y -v luksFormat "${PART}2"
+cryptsetup -y -v -q luksFormat "${PART}2"
 cryptsetup open "${PART}2" nixos-root
 
 # Format encrypted volume to btrfs
