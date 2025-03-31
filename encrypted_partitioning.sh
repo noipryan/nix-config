@@ -8,7 +8,7 @@ MAPPER="/dev/mapper/nixos-root"
 
 if [[ "$DISK" == *"nvme"* ]]; then
 
-  PART="p"
+  PART="${DISK}p"
 
 else
 
