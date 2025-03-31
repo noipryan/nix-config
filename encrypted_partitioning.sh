@@ -22,7 +22,7 @@ echo "Erasing all partitions on ${DISK}"
 wipefs -a $DISK
 
 echo "Erasing mbr with dd"
-dd if=/dev/zero of=$DISK bs=1M count=1
+#dd if=/dev/zero of=$DISK bs=1M count=1
 
 echo "Creating GPT partition table"
 parted -s $DISK -- mklabel gpt
