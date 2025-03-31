@@ -1,8 +1,24 @@
 #!/usr/bin/env bash
 
-DISK=$1
+DISK=$(lsblk -o NAME,TYPE | grep -v zram | awk '$2=="disk" {print "/dev/"$1}')
 
-echo "Erasing disk with dd"
+
+if [[ "$DISK" == *"nvme"* ]]; then
+
+  PART="p"
+
+else
+
+  PART=$DISK
+
+fi
+
+echo "Partitoning UEFI Disk"
+
+echo "Erasing all partitions on ${DISK}"
+wipefs -a $DISK
+
+echo "Erasing mbr with dd"
 dd if=/dev/zero of=$DISK bs=1M count=1
 
 echo "Creating GPT partition table"
@@ -12,19 +28,19 @@ echo "Creating ESP partition"
 parted -s $DISK -- mkpart ESP fat32 1MiB 1GiB
 parted -s $DISK -- set 1 boot on
 sleep 1
-mkfs.vfat -n boot "${DISK}1"
+mkfs.vfat -n boot "${PART}1"
 
 echo "Creating Data partition"
 parted -s $DISK -- mkpart nixos 1GiB 100%
 sleep 1
-mkfs.btrfs -f -L nixos "${DISK}2"
+mkfs.btrfs -f -L nixos "${PART}2"
 
 sleep 2
 # Placeholder for encryption settings
 #
 
 echo "Create btrfs subvolumes"
-mount "${DISK}2" /mnt
+mount "${PART}2" /mnt
 btrfs subvolume create /mnt/@
 btrfs subvolume create /mnt/@home
 btrfs subvolume create /mnt/@nix
