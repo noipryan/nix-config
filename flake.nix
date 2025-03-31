@@ -30,6 +30,8 @@
           ./modules/env.nix
           ./modules/packages.nix
           ./modules/sway.nix
+          ./modules/sddm.nix
+          ./modules/localization.nix
         ];
         specialArgs = { inherit pkgs-unstable; };
         };
