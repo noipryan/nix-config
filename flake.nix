@@ -28,6 +28,7 @@
         modules = [
           ./hosts/itc-devone-01/configuration.nix
           ./modules/env.nix
+          ./modules/fonts.nix
           ./modules/packages.nix
           ./modules/sway.nix
           ./modules/sddm.nix
@@ -39,6 +40,7 @@
         inherit pkgs;
         modules = [
           ./hosts/sway-test/configuration.nix
+          ./modules/fonts.nix
           ./modules/env.nix
           ./modules/packages.nix
           ./modules/kvm-guest.nix
@@ -46,30 +48,32 @@
         ];
         specialArgs = { inherit pkgs-unstable; };
         };
-        nixosConfigurations.itc-x270-01 = nixpkgs.lib.nixosSystem {
-          inherit pkgs;
-          modules = [
-            ./hosts/itc-x270-01/configuration.nix
-            ./modules/env.nix
-            ./modules/packages.nix
-            ./modules/sddm.nix
-            ./modules/sway.nix
-          ];
-        specialArgs = { inherit pkgs-unstable; };
-        };
-        nixosConfigurations.nixos-bios = nixpkgs.lib.nixosSystem {
-          inherit pkgs;
-          modules = [
-            ./hosts/nixos-bios/configuration.nix
-            ./modules/env.nix
-            ./modules/localization.nix
-	          ./modules/kvm-guest.nix
-            ./modules/packages.nix
-            ./modules/sddm.nix
-            ./modules/cinnamon.nix
-          ];
-        specialArgs = { inherit pkgs-unstable; };
-        };
+      nixosConfigurations.itc-x270-01 = nixpkgs.lib.nixosSystem {
+        inherit pkgs;
+        modules = [
+          ./hosts/itc-x270-01/configuration.nix
+          ./modules/fonts.nix            
+          ./modules/env.nix
+          ./modules/packages.nix
+          ./modules/sddm.nix
+          ./modules/sway.nix
+        ];
+      specialArgs = { inherit pkgs-unstable; };
+      };
+      nixosConfigurations.nixos-bios = nixpkgs.lib.nixosSystem {
+        inherit pkgs;
+        modules = [
+          ./hosts/nixos-bios/configuration.nix
+          ./modules/fonts.nix          
+          ./modules/env.nix
+          ./modules/localization.nix
+	        ./modules/kvm-guest.nix
+          ./modules/packages.nix
+          ./modules/sddm.nix
+          ./modules/cinnamon.nix
+        ];
+      specialArgs = { inherit pkgs-unstable; };
+      };
       homeConfigurations = {
         name = home-manager.lib.homeManagerConfiguration {
           inherit pkgs;
