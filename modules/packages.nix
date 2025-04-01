@@ -12,59 +12,64 @@
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
-  environment.systemPackages = with pkgs; [
-    pkgs.alacritty
-    pkgs-unstable.ansible
-    pkgs-unstable.ansible-lint
-    pkgs.bat
-    pkgs-unstable.vscode
-    pkgs.curl
-    pkgs.diffuse
-    pkgs.eza
-    pkgs-unstable.freerdp3
-    pkgs.fzf
-    pkgs.geany
-    pkgs.git
-    pkgs.google-chrome
-    pkgs.helix
-    pkgs.kdePackages.qtstyleplugin-kvantum
-    pkgs.kdePackages.qt6ct
-    pkgs.kdePackages.okular
-    pkgs.kitty
-    pkgs.krb5
-    pkgs.libsForQt5.qt5ct
-    pkgs.libsForQt5.qtstyleplugin-kvantum
-    pkgs.lxqt.lximage-qt
-    pkgs.lxappearance
-    pkgs.materia-theme
-    pkgs.materia-kde-theme
-    pkgs.neovim
-    pkgs.nix-ld
-    pkgs.nixos-artwork.wallpapers.simple-blue
-    pkgs.nmap
-    pkgs.nodejs_23
-    pkgs.openconnect
-    pkgs.openfortivpn
-    pkgs.papirus-icon-theme
-    pkgs-unstable.remmina
-    pkgs.rsync
-    pkgs.screen
-    pkgs.spice
-    pkgs.spice-vdagent
-    pkgs.sshpass
-    pkgs.starship
-    pkgs.terminator
-    pkgs.themechanger
-    pkgs.tmux
-    pkgs.vim
-    pkgs.wezterm
-    pkgs.wget
-    pkgs.yad
-    pkgs.yamllint
-    pkgs-unstable.zed-editor
-    pkgs.zoxide
-    pkgs.zsh
-  ];
+  environment.systemPackages = (with pkgs; [
+    adwaita-icon-theme
+    alacritty
+    bat
+    curl
+    diffuse
+    eza
+    fzf
+    geany
+    git
+    google-chrome
+    helix
+    kdePackages.qtstyleplugin-kvantum
+    kdePackages.qt6ct
+    kdePackages.okular
+    kitty
+    krb5
+    libsForQt5.qt5ct
+    libsForQt5.qtstyleplugin-kvantum
+    lxqt.lximage-qt
+    lxappearance
+    materia-theme
+    materia-kde-theme
+    neovim
+    nix-ld
+    nixos-artwork.wallpapers.simple-blue
+    nmap
+    nodejs_23
+    openconnect
+    openfortivpn
+    papirus-icon-theme
+    rsync
+    screen
+    sshpass
+    starship
+    terminator
+    themechanger
+    tmux
+    vim
+    wezterm
+    wget
+    yad
+    yamllint
+    zoxide
+    zsh
+  ])
+
+  ++
+
+  (with pkgs-unstable; [
+    ansible
+    ansible-lint
+    freerdp3
+    remmina
+    zed-editor
+    vscode
+
+  ]);
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   # programs.mtr.enable = true;

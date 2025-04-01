@@ -2,37 +2,33 @@
 
 {
 
-  environment.systemPackages = [
+  environment.systemPackages = (with pkgs; [
+      
+      brightnessctl
+      glib
+      gnome-keyring
+      grim
+      iwgtk
+      networkmanagerapplet
+      nwg-look
+      pavucontrol
+      rofi
+      slurp
+      sway
+      swaybg
+      sway-contrib.grimshot
+      swayidle
+      swaylock
+      swaynotificationcenter
+      wayland
+      waybar
+      wdisplays
+      wf-recorder
+      wl-clipboard
+      xdg-utils
+      wpa_supplicant_gui
 
-      pkgs.sway
-      pkgs.swaylock
-      pkgs.swayidle
-      pkgs.swaybg
-      pkgs.waybar
-      pkgs.wl-clipboard
-      pkgs.wayland
-      pkgs.xdg-utils
-      pkgs.glib
-      pkgs.wf-recorder
-      pkgs.swaynotificationcenter
-      pkgs.grim
-      pkgs.sway-contrib.grimshot
-      pkgs.slurp
-      pkgs.rofi
-      pkgs.pavucontrol
-      pkgs.networkmanagerapplet
-      pkgs.brightnessctl
-      pkgs.gnome-keyring
-      pkgs.wpa_supplicant_gui
-      pkgs.iwgtk
-      pkgs.nwg-look
-      pkgs.wdisplays
-      pkgs.adwaita-icon-theme
-      pkgs.materia-kde-theme
-      pkgs.materia-theme
-
-
-  ];
+  ]);
 
   xdg.portal ={
     enable = true;
@@ -43,6 +39,7 @@
       pkgs.xdg-desktop-portal-wlr
       pkgs.xdg-desktop-portal-gnome
       ];
+      gtkUsePortal = true;
   };
 
   programs.sway = {
