@@ -60,6 +60,19 @@
         ];
       specialArgs = { inherit pkgs-unstable; };
       };
+      nixosConfigurations.itcnetenglt01 = nixpkgs.lib.nixosSystem {
+        inherit pkgs;
+        modules = [
+          ./hosts/itcnetenglt01/configuration.nix
+          ./modules/fonts.nix            
+          ./modules/env.nix
+          ./modules/packages.nix
+          ./modules/localization.nix
+          ./modules/sddm.nix
+          ./modules/sway.nix
+        ];
+      specialArgs = { inherit pkgs-unstable; };
+      };
       nixosConfigurations.nixos-bios = nixpkgs.lib.nixosSystem {
         inherit pkgs;
         modules = [
