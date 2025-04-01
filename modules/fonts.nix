@@ -3,13 +3,14 @@
 {
 # Font configuration
   fonts.packages = 
-
     (with pkgs; [
     
     cantarell-fonts
     ubuntu-sans
 
     ])
+
+    ++
 
     (with pkgs-unstable; [
 
