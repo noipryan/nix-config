@@ -43,6 +43,7 @@
     openconnect
     openfortivpn
     papirus-icon-theme
+    qbittorrent
     rsync
     screen
     sshpass
