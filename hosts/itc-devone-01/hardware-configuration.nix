@@ -14,29 +14,35 @@
   boot.extraModulePackages = [ ];
 
   fileSystems."/" =
-    { device = "/dev/disk/by-uuid/a89ad837-9672-441e-b833-e672bc2efd74";
+    { device = "/dev/disk/by-uuid/b18526d2-f2c1-4b51-857d-3d2a4877b9d9";
       fsType = "btrfs";
       options = [ "subvol=@" ];
     };
 
-  boot.initrd.luks.devices."nixos-root".device = "/dev/disk/by-uuid/f5be7b57-2e34-4253-97f6-61acc3111462";
+  boot.initrd.luks.devices."nixos-root".device = "/dev/disk/by-uuid/631dc157-c393-4c4b-908e-2d023e602a47";
 
   fileSystems."/boot" =
-    { device = "/dev/disk/by-uuid/4875-1F45";
+    { device = "/dev/disk/by-uuid/D6FC-7919";
       fsType = "vfat";
       options = [ "fmask=0022" "dmask=0022" ];
     };
 
   fileSystems."/home" =
-    { device = "/dev/disk/by-uuid/a89ad837-9672-441e-b833-e672bc2efd74";
+    { device = "/dev/disk/by-uuid/b18526d2-f2c1-4b51-857d-3d2a4877b9d9";
       fsType = "btrfs";
       options = [ "subvol=@home" ];
     };
 
   fileSystems."/nix" =
-    { device = "/dev/disk/by-uuid/a89ad837-9672-441e-b833-e672bc2efd74";
+    { device = "/dev/disk/by-uuid/b18526d2-f2c1-4b51-857d-3d2a4877b9d9";
       fsType = "btrfs";
-      options = [ "subvol=@nix" ];
+      options = [ "subvol=@" ];
+    };
+
+  fileSystems."/var/log" =
+    { device = "/dev/disk/by-uuid/b18526d2-f2c1-4b51-857d-3d2a4877b9d9";
+      fsType = "btrfs";
+      options = [ "subvol=@" ];
     };
 
   swapDevices = [ ];
@@ -46,6 +52,7 @@
   # still possible to use this option, but it's recommended to use it in conjunction
   # with explicit per-interface declarations with `networking.interfaces.<interface>.useDHCP`.
   networking.useDHCP = lib.mkDefault true;
+  # networking.interfaces.enp3s0f4u1.useDHCP = lib.mkDefault true;
   # networking.interfaces.wlo1.useDHCP = lib.mkDefault true;
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
