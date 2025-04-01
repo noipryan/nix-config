@@ -70,6 +70,7 @@
           ./modules/localization.nix
           ./modules/sddm.nix
           ./modules/sway.nix
+          ./modules/tailscale.nix
         ];
       specialArgs = { inherit pkgs-unstable; };
       };
