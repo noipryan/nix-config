@@ -39,7 +39,6 @@
       pkgs.xdg-desktop-portal-wlr
       pkgs.xdg-desktop-portal-gnome
       ];
-      gtkUsePortal = true;
   };
 
   programs.sway = {
