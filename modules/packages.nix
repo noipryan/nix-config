@@ -73,19 +73,4 @@
   #   enableSSHSupport = true;
   # };
 
-  # Font configuration
-  fonts.packages = with pkgs; [
-    cantarell-fonts
-    ubuntu-sans
-    pkgs-unstable.nerd-fonts.caskaydia-cove
-    pkgs-unstable.nerd-fonts.comic-shanns-mono
-    pkgs-unstable.nerd-fonts.fira-code
-    pkgs-unstable.nerd-fonts.fira-mono
-    pkgs-unstable.nerd-fonts.iosevka
-    pkgs-unstable.nerd-fonts.jetbrains-mono
-    pkgs-unstable.nerd-fonts.roboto-mono
-    pkgs-unstable.nerd-fonts.sauce-code-pro
-    pkgs-unstable.nerd-fonts.ubuntu-mono
-    pkgs-unstable.nerd-fonts.victor-mono
-  ];
 }
