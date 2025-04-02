@@ -24,6 +24,7 @@
     git
     google-chrome
     helix
+    kdePackages.breeze
     kdePackages.qtstyleplugin-kvantum
     kdePackages.qt6ct
     kdePackages.okular
