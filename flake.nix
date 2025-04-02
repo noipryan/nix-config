@@ -33,7 +33,7 @@
           ./modules/sway.nix
           ./modules/sddm.nix
           ./modules/localization.nix
-          ./modules/virtualization.nix
+          ./modules/kvm.nix
         ];
         specialArgs = { inherit pkgs-unstable; };
         };
@@ -72,6 +72,7 @@
           ./modules/sddm.nix
           ./modules/sway.nix
           ./modules/tailscale.nix
+          ./modules/kvm.nix
         ];
       specialArgs = { inherit pkgs-unstable; };
       };
