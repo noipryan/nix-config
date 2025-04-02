@@ -7,8 +7,37 @@
   home.homeDirectory = "/home/swainrl";
 
   # fix qt5ct
-  home.file.".config/Kvantum/MateriaDark".source = "${pkgs.materia-kde-theme}/share/Kvantum/MateriaDark";
+  # home.file.".config/Kvantum/MateriaDark".source = "${pkgs.materia-kde-theme}/share/Kvantum/MateriaDark";
   
+  # wayland.windowManager.sway = {
+  #   config
+  #     seat = {
+  #       "*" = {
+  #         xcursor_theme = "${config.gtk.cursorTheme.name} ${toString config.gtk.cursorTheme.size}";
+  #       };
+  #     };
+  #   };
+  # };
+
+  # home.pointerCursor = {
+  #   name = "phinger-cursors-dark";
+  #   size = 24;
+  #   package = pkgs.phinger-cursors;
+  #   x11.enable = true;
+  #   gtk.enable = true;
+  # };
+  #
+  # gtk = {
+  #   enable = true;
+  #   cursorTheme = {
+  #     name = "phinger-cursors-dark";
+  #     size = 24;
+  #     package = pkgs.phinger-cursors;
+  #   };
+  # };
+
+
+
   # This value determines the Home Manager release that your configuration is
   # compatible with. This helps avoid breakage when a new Home Manager release
   # introduces backwards incompatible changes.

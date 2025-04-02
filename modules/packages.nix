@@ -24,7 +24,6 @@
     git
     google-chrome
     helix
-    kdePackages.breeze
     kdePackages.qtstyleplugin-kvantum
     kdePackages.qt6ct
     kdePackages.okular
@@ -44,6 +43,7 @@
     openconnect
     openfortivpn
     papirus-icon-theme
+    phinger-cursors
     qbittorrent
     rsync
     screen
@@ -68,6 +68,7 @@
     ansible-lint
     freerdp3
     remmina
+    slack
     zed-editor
     vscode
 
