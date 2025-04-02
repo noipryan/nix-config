@@ -69,7 +69,7 @@
   users.users.swainrl = { 
      isNormalUser = true; 
      description = "Ryan Swain"; 
-     extraGroups = [ "networkmanager" "wheel" "audio" "input" "video" ]; 
+     extraGroups = [ "networkmanager" "wheel" "audio" "input" "libvirtd" "video" ]; 
      packages = with pkgs; [ 
      #  thunderbird 
      ]; 

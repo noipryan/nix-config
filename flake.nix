@@ -33,6 +33,7 @@
           ./modules/sway.nix
           ./modules/sddm.nix
           ./modules/localization.nix
+          ./modules/virtualization.nix
         ];
         specialArgs = { inherit pkgs-unstable; };
         };
