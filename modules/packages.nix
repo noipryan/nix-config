@@ -36,6 +36,7 @@
     lxappearance
     materia-theme
     materia-kde-theme
+    nemo
     neovim
     nix-ld
     nixos-artwork.wallpapers.simple-blue
