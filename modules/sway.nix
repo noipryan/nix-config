@@ -66,6 +66,9 @@
    # Enable CUPS to print documents.
   services.printing.enable = true;
 
+  # Mount, trash, and other functionalities
+  services.gvfs.enable = true;
+  
   # Enable sound with pipewire.
   hardware.pulseaudio.enable = false;
   security.rtkit.enable = true;
