@@ -18,6 +18,7 @@
     bat
     curl
     diffuse
+    dig
     eza
     fzf
     geany
