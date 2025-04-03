@@ -53,6 +53,7 @@
     terminator
     themechanger
     tmux
+    traceroute
     vim
     wezterm
     wget
