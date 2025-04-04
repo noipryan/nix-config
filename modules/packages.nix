@@ -21,6 +21,7 @@
     dig
     eza
     fzf
+    gcc
     geany
     git
     google-chrome
@@ -46,7 +47,7 @@
     openfortivpn
     papirus-icon-theme
     phinger-cursors
-    python314
+    python312
     qbittorrent
     rsync
     screen
