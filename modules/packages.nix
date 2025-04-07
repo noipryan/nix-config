@@ -60,6 +60,7 @@
     vim
     wezterm
     wget
+    wireshark
     yad
     yamllint
     zoxide

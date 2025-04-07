@@ -26,7 +26,7 @@
         specialArgs = { inherit pkgs-unstable; };
         };
       nixosConfigurations.itc-devone-01 = nixpkgs.lib.nixosSystem {
-        inherit pkgs;
+        inherit system;
         modules = [
           ./hosts/itc-devone-01/configuration.nix
           ./modules/env.nix
@@ -37,7 +37,7 @@
           ./modules/localization.nix
           ./modules/kvm.nix
         ];
-        specialArgs = { inherit pkgs-unstable; };
+        specialArgs = { inherit pkgs-unstable pkgs; };
         };
       nixosConfigurations.sway-test = nixpkgs.lib.nixosSystem {
         inherit pkgs;
