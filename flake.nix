@@ -14,8 +14,10 @@
     let
       system = "x86_64-linux";
       commonArgs = { inherit system; config.allowUnfree = true; };
-      pkgs = import nixpkgs commonArgs;
-      pkgs-unstable = import nixpkgs-unstable commonArgs;
+      #pkgs = import nixpkgs commonArgs;
+      #pkgs-unstable = import nixpkgs-unstable commonArgs;
+      pkgs = import nixpkgs { config.allowUnfree = true; };
+      pkgs-unstable = import nixpkgs-unstable { config.allowUnfree = true; };
     in {
 
       nixosConfigurations.default = nixpkgs.lib.nixosSystem {
@@ -53,7 +55,7 @@
         inherit pkgs;
         modules = [
           ./hosts/itc-x270-01/configuration.nix
-          ./modules/fonts.nix            
+          ./modules/fonts.nix
           ./modules/env.nix
           ./modules/packages.nix
           ./modules/sddm.nix
@@ -65,7 +67,7 @@
         inherit pkgs;
         modules = [
           ./hosts/itcnetenglt01/configuration.nix
-          ./modules/fonts.nix            
+          ./modules/fonts.nix
           ./modules/env.nix
           ./modules/packages.nix
           ./modules/localization.nix
@@ -80,7 +82,7 @@
         inherit pkgs;
         modules = [
           ./hosts/nixos-bios/configuration.nix
-          ./modules/fonts.nix          
+          ./modules/fonts.nix
           ./modules/env.nix
           ./modules/localization.nix
           ./modules/kvm-guest.nix
