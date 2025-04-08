@@ -16,6 +16,7 @@
     adwaita-icon-theme
     alacritty
     bat
+    brave
     curl
     diffuse
     dig
