@@ -38,6 +38,7 @@
     lxappearance
     materia-theme
     materia-kde-theme
+    microsoft-edge
     nemo
     neovim
     nix-ld
