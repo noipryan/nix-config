@@ -35,6 +35,7 @@
           ./modules/sway.nix
           ./modules/sddm.nix
           ./modules/localization.nix
+          ./modules/tailscale.nix
           ./modules/kvm.nix
         ];
         specialArgs = { inherit pkgs-unstable pkgs; };

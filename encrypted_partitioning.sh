@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+# Stop on error
+set -e
+
 # DISK=$(lsblk -o NAME,TYPE | grep -v zram | awk '$2=="disk" {print "/dev/"$1}')
 
 DISK=$1
@@ -21,7 +24,7 @@ echo "Partitoning encrypted UEFI Disk"
 echo "Erasing all partitions on ${DISK}"
 wipefs -a $DISK
 
-echo "Erasing mbr with dd"
+#echo "Erasing mbr with dd"
 #dd if=/dev/zero of=$DISK bs=1M count=1
 
 echo "Creating GPT partition table"
