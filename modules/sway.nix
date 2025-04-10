@@ -3,7 +3,7 @@
 {
 
   environment.systemPackages = (with pkgs; [
-      
+
       brightnessctl
       glib
       gnome-keyring
@@ -13,6 +13,7 @@
       nwg-look
       pavucontrol
       playerctl
+      polkit_gnome
       rofi
       slurp
       sway
@@ -53,6 +54,8 @@
 
   services.gnome.gnome-keyring.enable = true;
 
+  security.polkit.enable = true;
+
   services.dbus.enable = true;
 
   services.xserver.enable = true;
@@ -62,13 +65,13 @@
   environment.sessionVariables = rec {
     NIXOS_OZONE_WL = "1";
   };
-  
+
    # Enable CUPS to print documents.
   services.printing.enable = true;
 
   # Mount, trash, and other functionalities
   services.gvfs.enable = true;
-  
+
   # Enable sound with pipewire.
   hardware.pulseaudio.enable = false;
   security.rtkit.enable = true;
@@ -83,6 +86,6 @@
     # use the example session manager (no others are packaged yet so this is enabled by default,
     # no need to redefine it in your config for now)
     #media-session.enable = true;
-  }; 
+  };
 
 }
