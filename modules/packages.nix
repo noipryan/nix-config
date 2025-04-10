@@ -1,8 +1,6 @@
 { config, lib, pkgs, pkgs-unstable, ... }:
 
 {
-  # Enable ZSH
-  programs.zsh.enable = true;
 
   # Install firefox.
   programs.firefox.enable = true;
