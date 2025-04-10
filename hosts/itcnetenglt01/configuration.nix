@@ -10,9 +10,9 @@
       ./hardware-configuration.nix
     ];
 
-  # Enable experimental features 
-  nix.settings.experimental-features = [ "nix-command" "flakes" ]; 
- 
+  # Enable experimental features
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -42,7 +42,7 @@
   # services.xserver.enable = true;
 
 
-  
+
 
   # Configure keymap in X11
   # services.xserver.xkb.layout = "us";
@@ -62,18 +62,18 @@
   # Enable touchpad support (enabled default in most desktopManager).
   # services.libinput.enable = true;
 
-  # Enable ZSH 
-  programs.zsh.enable = true; 
+  # Enable ZSH
+  programs.zsh.enable = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.swainrl = { 
-     isNormalUser = true; 
-     description = "Ryan Swain"; 
-     extraGroups = [ "networkmanager" "wheel" "audio" "input" "video" ]; 
-     packages = with pkgs; [ 
-     #  thunderbird 
-     ]; 
-     shell = pkgs.zsh; 
+  users.users.swainrl = {
+     isNormalUser = true;
+     description = "Ryan Swain";
+     extraGroups = [ "networkmanager" "wheel" "audio" "input" "video" "libvirtd" ];
+     packages = with pkgs; [
+     #  thunderbird
+     ];
+     shell = pkgs.zsh;
    };
   # users.users.alice = {
   #   isNormalUser = true;
@@ -136,4 +136,3 @@
   system.stateVersion = "24.11"; # Did you read the comment?
 
 }
-
