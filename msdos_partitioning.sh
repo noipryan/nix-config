@@ -1,9 +1,12 @@
 #!/usr/bin/env bash
 
-DISK=$1 
+# Stop on error
+set -e
 
-echo "Erasing disk with dd"
-dd if=/dev/zero of=$DISK bs=1M count=1
+DISK=$1
+
+#echo "Erasing disk with dd"
+#dd if=/dev/zero of=$DISK bs=1M count=1
 
 echo "Creating msdos partition table"
 parted -s $DISK -- mklabel msdos

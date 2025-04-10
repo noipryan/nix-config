@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
 
-DISK=$(lsblk -o NAME,TYPE | grep -v zram | awk '$2=="disk" {print "/dev/"$1}')
-
+# Stop on error
+set -e
 
 if [[ "$DISK" == *"nvme"* ]]; then
 
-  PART="p"
+  PART="${DISK}p"
 
 else
 
@@ -18,8 +18,8 @@ echo "Partitoning UEFI Disk"
 echo "Erasing all partitions on ${DISK}"
 wipefs -a $DISK
 
-echo "Erasing mbr with dd"
-dd if=/dev/zero of=$DISK bs=1M count=1
+#echo "Erasing mbr with dd"
+#dd if=/dev/zero of=$DISK bs=1M count=1
 
 echo "Creating GPT partition table"
 parted -s $DISK -- mklabel gpt
