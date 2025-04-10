@@ -6,11 +6,13 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    pkgs.spice-vdagent
+    spice-vdagent
   ];
 
   # Enable guest tools in KVM
   services.spice-vdagentd.enable = true;
   services.qemuGuest.enable = true;
+
+  hardware.opengl.enable = true;
 
 }

@@ -20,7 +20,7 @@
   ];
 
   # Enable guest tools in KVM
-  services.spice-vdagentd.enable = true;
-  services.qemuGuest.enable = true;
+  #services.spice-vdagentd.enable = true;
+  #services.qemuGuest.enable = true;
 
 }
