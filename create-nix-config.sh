@@ -2,9 +2,9 @@
 
 NIX_CONFIG="/mnt/etc/nixos/configuration.nix"
 read -p "Enter hostname: " NIX_HOSTNAME
-read -p "Enter full name: " NIX_FULLNAME
-read -p "Enter username: " NIX_USER
-read -s -p "Enter Password: " NIX_PASSWORD
+#read -p "Enter full name: " NIX_FULLNAME
+#read -p "Enter username: " NIX_USER
+#read -s -p "Enter Password: " NIX_PASSWORD
 
 # Generate a new config
 nixos-generate-config --force --root /mnt
