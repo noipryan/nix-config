@@ -59,7 +59,7 @@ if [ -d "${NIX_CONFIG_DIR}" ]; then
   cp ${NIX_HARDWARE} $NIX_CONFIG_DIR}/hardware-configuration.nix
 else
   echo "No configuration exists for ${NIX_HOSTNAME}. Creating folder structure in nix-config repo"
-  mkdir ${NIX_CONFIG_DIR}/hosts/${NIX_HOSTNAME}
+  mkdir ${NIX_CONFIG_DIR}
   echo "Copying configuration.nix & hardware-configuration.nix to ${NIX_CONFIG_DIR}"
   cp ${NIX_CONFIG} ${NIX_CONFIG_DIR}/configuration.nix
   cp ${NIX_HARDWARE} $NIX_CONFIG_DIR}/hardware-configuration.nix
