@@ -8,13 +8,6 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
-      ../../users/swainrl.nix
-      ../../modules/localization.nix
-      ../../modules/env.nix
-      ../../modules/kvm-guest.nix
-      ../../modules/sddm.nix
-      ../../modules/packages.nix
-      ../../modules/plasma6.nix
     ];
 
   # Enable experimental features 
