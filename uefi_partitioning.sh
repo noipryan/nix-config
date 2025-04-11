@@ -15,6 +15,14 @@ else
 
 fi
 
+# Undo any previous changes.
+# This allows me to re-run the script many times over
+set +e
+umount -R /mnt
+#cryptsetup close cryptroot
+vgchange -an
+set -e
+
 echo "Partitoning UEFI Disk"
 
 echo "Erasing all partitions on ${DISK}"
