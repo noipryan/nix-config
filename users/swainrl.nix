@@ -8,7 +8,7 @@
   users.users.swainrl = {
     isNormalUser = true;
     description = "Ryan Swain";
-    hashedPassword = "$y$j9T$/dW7iTZhxhNFgWAxtGhmz0$mRYC7yyfReOqB1cH5nw8rYAab71r1Pu7O7APui/6qKD";
+    hashedPassword = "$y$j9T$A.Qb65oGnFXMwmy85p2vL.$5CY6zYr0TXAC9/YEe.j6gLCDwrfVA.nbxBJd.4./DIC";
     extraGroups = [ "networkmanager" "wheel" "audio" "input" "libvirtd" "video" ];
     packages = with pkgs; [
       #  thunderbird

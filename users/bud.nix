@@ -8,7 +8,7 @@
   users.users.bud = {
     isNormalUser = true;
     description = "Ryan Swain";
-    hashedPassword = "$y$j9T$HysRHFeFKhWisSKJ5E9HT0$XL0VH8AnZ5evPUj.b5jVe9ARfit1xox6rClysGLQWUA".
+    hashedPassword = "$y$j9T$Ac5mXTfcqljUVP7sdEfdW/$8wXnl72czUwJad1HveR0VzzI/7A2cXZa7ocjfHhCoBA";
     extraGroups = [ "networkmanager" "wheel" "audio" "input" "libvirtd" "video" ];
     packages = with pkgs; [
       #  thunderbird
