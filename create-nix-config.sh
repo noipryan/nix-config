@@ -62,7 +62,7 @@ else
   mkdir ${NIX_CONFIG_DIR}
   echo "Copying configuration.nix & hardware-configuration.nix to ${NIX_CONFIG_DIR}"
   cp ${NIX_CONFIG} ${NIX_CONFIG_DIR}/configuration.nix
-  cp ${NIX_HARDWARE} $NIX_CONFIG_DIR}/hardware-configuration.nix
+  cp ${NIX_HARDWARE} ${NIX_CONFIG_DIR}/hardware-configuration.nix
 fi
 echo $SEP
 #echo "Going into /mnt and running nixos-install --no-root-password"
