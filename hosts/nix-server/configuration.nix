@@ -12,7 +12,6 @@
       ../../modules/localization.nix
       ../../modules/env.nix
       ../../modules/kvm-guest.nix
-      ../../modules/sddm.nix
       ../../modules/packages.nix
       ../../modules/plasma6.nix
     ];
