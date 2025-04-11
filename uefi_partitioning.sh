@@ -3,6 +3,8 @@
 # Stop on error
 set -e
 
+DISK=$1
+
 if [[ "$DISK" == *"nvme"* ]]; then
 
   PART="${DISK}p"
