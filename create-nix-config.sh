@@ -56,7 +56,7 @@ echo $SEP
 if [ -d "${NIX_CONFIG_DIR}" ]; then
   echo "Current configuration exists for ${NIX_HOSTNAME}."
   echo "Copying hardware-configuration.nix to ${NIX_CONFIG_DIR}"
-  cp ${NIX_HARDWARE} $NIX_CONFIG_DIR}/hardware-configuration.nix
+  cp ${NIX_HARDWARE} ${NIX_CONFIG_DIR}/hardware-configuration.nix
 else
   echo "No configuration exists for ${NIX_HOSTNAME}. Creating folder structure in nix-config repo"
   mkdir ${NIX_CONFIG_DIR}
