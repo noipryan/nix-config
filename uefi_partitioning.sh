@@ -3,35 +3,37 @@
 # Stop on error
 set -e
 
+DISK=$1
+
 if [[ "$DISK" == *"nvme"* ]]; then
 
   PART="${DISK}p"
 
 else
 
-  PART=$DISK
+  PART=${DISK}
 
 fi
 
 echo "Partitoning UEFI Disk"
 
 echo "Erasing all partitions on ${DISK}"
-wipefs -a $DISK
+wipefs -a ${DISK}
 
 #echo "Erasing mbr with dd"
 #dd if=/dev/zero of=$DISK bs=1M count=1
 
 echo "Creating GPT partition table"
-parted -s $DISK -- mklabel gpt
+parted -s ${DISK} -- mklabel gpt
 
 echo "Creating ESP partition"
-parted -s $DISK -- mkpart ESP fat32 1MiB 1GiB
-parted -s $DISK -- set 1 boot on
+parted -s ${DISK} -- mkpart ESP fat32 1MiB 1GiB
+parted -s ${DISK} -- set 1 boot on
 sleep 1
 mkfs.vfat -n boot "${PART}1"
 
 echo "Creating Data partition"
-parted -s $DISK -- mkpart nixos 1GiB 100%
+parted -s ${DISK} -- mkpart nixos 1GiB 100%
 sleep 1
 mkfs.btrfs -f -L nixos "${PART}2"
 
