@@ -25,6 +25,13 @@
         modules = [ ./hosts/default/configuration.nix ];
         specialArgs = { inherit pkgs-unstable; };
         };
+        nixosConfigurations.itc-devone-01 = nixpkgs.lib.nixosSystem {
+          inherit system;
+          modules = [
+            ./hosts/sway-server/configuration.nix
+          ];
+          specialArgs = { inherit pkgs-unstable pkgs; };
+          };
       nixosConfigurations.itc-devone-01 = nixpkgs.lib.nixosSystem {
         inherit system;
         modules = [
