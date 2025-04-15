@@ -15,6 +15,7 @@
       ../../modules/packages.nix
       ../../modules/sway.nix
       ../../modules/sddm.nix
+      ../../modules/fonts.nix
     ];
 
   # Enable experimental features 
@@ -25,6 +26,9 @@
   boot.loader.efi.canTouchEfiVariables = true;
 
   networking.hostName = "bud-sys76"; # Define your hostname.
+  
+  networking.networkmanager.enable = true;
+
   services.openssh.enable = true;
 
   # Open ports in the firewall.
