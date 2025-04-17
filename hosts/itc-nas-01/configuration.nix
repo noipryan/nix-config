@@ -8,10 +8,12 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
+      ./local-packages.nix
       ../../users/swainrl.nix
       ../../modules/localization.nix
       ../../modules/env.nix
       ../../modules/server.nix
+      ../../modules/fonts.nix
     ];
 
   # Enable experimental features
