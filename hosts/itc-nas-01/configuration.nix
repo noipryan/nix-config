@@ -12,6 +12,7 @@
       ../../modules/localization.nix
       ../../modules/env.nix
       ../../modules/server.nix
+      ../../modules/fonts.nix
     ];
 
   # Enable experimental features
