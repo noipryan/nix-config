@@ -25,6 +25,13 @@
         modules = [ ./hosts/default/configuration.nix ];
         specialArgs = { inherit pkgs-unstable; };
         };
+        nixosConfigurations.bud-sys76 = nixpkgs.lib.nixosSystem {
+          inherit system;
+          modules = [
+            ./hosts/bud-sys76/configuration.nix
+          ];
+          specialArgs = { inherit pkgs-unstable pkgs; };
+          };
         nixosConfigurations.nix-server = nixpkgs.lib.nixosSystem {
           inherit system;
           modules = [

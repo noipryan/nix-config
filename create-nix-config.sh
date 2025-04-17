@@ -15,7 +15,7 @@ echo $SEP
 
 NIX_CONFIG="/mnt/etc/nixos/configuration.nix"
 NIX_HARDWARE="/mnt/etc/nixos/hardware-configuration.nix"
-NIX_CONFIG_DIR="/root/nix-config/${NIX_HOSTNAME}"
+NIX_CONFIG_DIR="/root/nix-config/hosts/${NIX_HOSTNAME}"
 
 # Generate a new config
 nixos-generate-config --force --root /mnt

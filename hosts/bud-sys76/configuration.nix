@@ -8,12 +8,14 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
-      ../../users/swainrl.nix
+      ../../users/bud.nix
       ../../modules/localization.nix
       ../../modules/env.nix
-      ../../modules/kvm-guest.nix
+      ../../modules/system76.nix
       ../../modules/packages.nix
-      ../../modules/plasma6.nix
+      ../../modules/sway.nix
+      ../../modules/sddm.nix
+      ../../modules/fonts.nix
     ];
 
   # Enable experimental features 
@@ -23,7 +25,10 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  networking.hostName = "nix-server"; # Define your hostname.
+  networking.hostName = "bud-sys76"; # Define your hostname.
+  
+  networking.networkmanager.enable = true;
+
   services.openssh.enable = true;
 
   # Open ports in the firewall.
