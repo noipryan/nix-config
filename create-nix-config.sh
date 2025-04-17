@@ -80,8 +80,8 @@ echo $SEP
 echo $SEP
 echo "Exporting vars for install script"
 
-export NIX_HOSTNAME=${NIX_HOSTNAME}
-export NIX_USER=${NIX_USER}
+export NIX_HOSTNAME="${NIX_HOSTNAME}"
+export NIX_USER="${NIX_USER}"
 
 echo $SEP
 
