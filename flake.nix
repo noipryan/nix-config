@@ -24,21 +24,22 @@
         inherit pkgs;
         modules = [ ./hosts/default/configuration.nix ];
         specialArgs = { inherit pkgs-unstable; };
-        };
-        nixosConfigurations.bud-sys76 = nixpkgs.lib.nixosSystem {
-          inherit system;
-          modules = [
-            ./hosts/bud-sys76/configuration.nix
-          ];
-          specialArgs = { inherit pkgs-unstable pkgs; };
-          };
-        nixosConfigurations.nix-server = nixpkgs.lib.nixosSystem {
-          inherit system;
-          modules = [
-            ./hosts/nix-server/configuration.nix
-          ];
-          specialArgs = { inherit pkgs-unstable pkgs; };
-          };
+      	};
+      nixosConfigurations.bud-sys76 = nixpkgs.lib.nixosSystem {
+        inherit system;
+        modules = [ ./hosts/bud-sys76/configuration.nix ];
+      	specialArgs = { inherit pkgs-unstable pkgs; };
+      	};
+      nixosConfigurations.nix-server = nixpkgs.lib.nixosSystem {
+        inherit system;
+        modules = [ ./hosts/nix-server/configuration.nix ];
+        specialArgs = { inherit pkgs-unstable pkgs; };
+      	};
+      	nixosConfigurations.itc-nas-01 = nixpkgs.lib.nixosSystem {
+        inherit system;
+        modules = [ ./hosts/itc-nas-01/configuration.nix ];
+        specialArgs = { inherit pkgs-unstable pkgs; };
+      	};
       nixosConfigurations.itc-devone-01 = nixpkgs.lib.nixosSystem {
         inherit system;
         modules = [
