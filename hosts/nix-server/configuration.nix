@@ -11,14 +11,12 @@
       ../../users/swainrl.nix
       ../../modules/localization.nix
       ../../modules/env.nix
-      ../../modules/kvm-guest.nix
-      ../../modules/packages.nix
-      ../../modules/plasma6.nix
+      ../../modules/server.nix
     ];
 
-  # Enable experimental features 
-  nix.settings.experimental-features = [ "nix-command" "flakes" ]; 
- 
+  # Enable experimental features
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -57,4 +55,3 @@
   system.stateVersion = "24.11"; # Did you read the comment?
 
 }
-
