@@ -2,10 +2,6 @@
 
 {
   
-  # allow insecure packages 
-  nixpkgs.config.permittedInsecurePackages = [
-    "archiver-3.5.1"
-    ];
   # Install firefox.
   programs.firefox.enable = true;
 
@@ -17,6 +13,7 @@
   environment.systemPackages = (with pkgs; [
     adwaita-icon-theme
     alacritty
+    ark
     bat
     brave
     curl
@@ -50,7 +47,6 @@
     openconnect
     openfortivpn
     papirus-icon-theme
-    peazip
     phinger-cursors
     python312
     qbittorrent
