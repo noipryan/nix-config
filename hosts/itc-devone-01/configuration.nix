@@ -11,6 +11,7 @@
       ../../users/swainrl.nix
       ../../modules/env.nix
       ../../modules/fonts.nix
+      ../../modules/kvm.nix
       ../../modules/localization.nix
       ../../modules/sddm.nix
       ../../modules/sway.nix
