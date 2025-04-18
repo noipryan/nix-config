@@ -63,7 +63,7 @@
   services.dbus.enable = true;
 
   services.xserver.enable = true;
-  #services.displayManager.sddm.enable = true;
+
   services.libinput.enable = true;
 
   environment.sessionVariables = rec {
