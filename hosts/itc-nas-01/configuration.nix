@@ -14,6 +14,7 @@
       ../../modules/env.nix
       ../../modules/server.nix
       ../../modules/fonts.nix
+      ../../modules/zsh.nix
     ];
 
   # Enable experimental features
