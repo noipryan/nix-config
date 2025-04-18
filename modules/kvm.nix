@@ -16,7 +16,14 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    pkgs.OVMFFull
+    virt-manager
+    virt-viewer
+    spice
+    spice-gtk
+    spice-protocol
+    win-virtio
+    win-spice
+    OVMFFull
   ];
 
   # Enable guest tools in KVM
