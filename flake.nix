@@ -25,86 +25,69 @@
         modules = [ ./hosts/default/configuration.nix ];
         specialArgs = { inherit pkgs-unstable; };
       	};
+
       nixosConfigurations.bud-sys76 = nixpkgs.lib.nixosSystem {
         inherit system;
         modules = [ ./hosts/bud-sys76/configuration.nix ];
       	specialArgs = { inherit pkgs-unstable pkgs; };
       	};
+
       nixosConfigurations.nix-server = nixpkgs.lib.nixosSystem {
         inherit system;
         modules = [ ./hosts/nix-server/configuration.nix ];
         specialArgs = { inherit pkgs-unstable pkgs; };
       	};
-      	nixosConfigurations.itc-nas-01 = nixpkgs.lib.nixosSystem {
+
+      nixosConfigurations.itc-nas-01 = nixpkgs.lib.nixosSystem {
         inherit system;
         modules = [ ./hosts/itc-nas-01/configuration.nix ];
         specialArgs = { inherit pkgs-unstable pkgs; };
       	};
+
       nixosConfigurations.itc-devone-01 = nixpkgs.lib.nixosSystem {
         inherit system;
         modules = [
           ./hosts/itc-devone-01/configuration.nix
-          ./modules/env.nix
-          ./modules/fonts.nix
-          ./modules/packages.nix
-          ./modules/sway.nix
-          ./modules/sddm.nix
-          ./modules/localization.nix
-          ./modules/tailscale.nix
-          ./modules/kvm.nix
         ];
         specialArgs = { inherit pkgs-unstable pkgs; };
         };
+
+      nixosConfigurations.itc-gpd-01 = nixpkgs.lib.nixosSystem {
+        inherit system;
+        modules = [
+          ./hosts/itc-gpd-01/configuration.nix
+        ];
+        specialArgs = { inherit pkgs-unstable pkgs; };
+        };
+
       nixosConfigurations.sway-test = nixpkgs.lib.nixosSystem {
         inherit pkgs;
         modules = [
           ./hosts/sway-test/configuration.nix
-          ./modules/fonts.nix
-          ./modules/env.nix
-          ./modules/packages.nix
-          ./modules/kvm-guest.nix
-          ./modules/sway.nix
         ];
         specialArgs = { inherit pkgs-unstable; };
         };
+
       nixosConfigurations.itc-x270-01 = nixpkgs.lib.nixosSystem {
         inherit pkgs;
         modules = [
           ./hosts/itc-x270-01/configuration.nix
-          ./modules/fonts.nix
-          ./modules/env.nix
-          ./modules/packages.nix
-          ./modules/sddm.nix
-          ./modules/sway.nix
         ];
       specialArgs = { inherit pkgs-unstable; };
       };
+
       nixosConfigurations.itcnetenglt01 = nixpkgs.lib.nixosSystem {
         inherit pkgs;
         modules = [
           ./hosts/itcnetenglt01/configuration.nix
-          ./modules/fonts.nix
-          ./modules/env.nix
-          ./modules/packages.nix
-          ./modules/localization.nix
-          ./modules/sddm.nix
-          ./modules/sway.nix
-          ./modules/tailscale.nix
-          ./modules/kvm.nix
         ];
       specialArgs = { inherit pkgs-unstable; };
       };
+
       nixosConfigurations.nixos-bios = nixpkgs.lib.nixosSystem {
         inherit pkgs;
         modules = [
           ./hosts/nixos-bios/configuration.nix
-          ./modules/fonts.nix
-          ./modules/env.nix
-          ./modules/localization.nix
-          ./modules/kvm-guest.nix
-          ./modules/packages.nix
-          ./modules/sddm.nix
-          ./modules/cinnamon.nix
         ];
       specialArgs = { inherit pkgs-unstable; };
       };
