@@ -16,7 +16,7 @@
   fileSystems."/" =
     { device = "/dev/disk/by-uuid/b18526d2-f2c1-4b51-857d-3d2a4877b9d9";
       fsType = "btrfs";
-      options = [ "subvol=@" ];
+      options = [ "subvol=@" "compress=zstd:1" "noatime" ];
     };
 
   boot.initrd.luks.devices."nixos-root".device = "/dev/disk/by-uuid/631dc157-c393-4c4b-908e-2d023e602a47";
@@ -30,19 +30,19 @@
   fileSystems."/home" =
     { device = "/dev/disk/by-uuid/b18526d2-f2c1-4b51-857d-3d2a4877b9d9";
       fsType = "btrfs";
-      options = [ "subvol=@home" ];
+      options = [ "subvol=@home" "compress=zstd:1" ];
     };
 
   fileSystems."/nix" =
     { device = "/dev/disk/by-uuid/b18526d2-f2c1-4b51-857d-3d2a4877b9d9";
       fsType = "btrfs";
-      options = [ "subvol=@" ];
+      options = [ "subvol=@" "compress=zstd:1" "noatime" ];
     };
 
   fileSystems."/var/log" =
     { device = "/dev/disk/by-uuid/b18526d2-f2c1-4b51-857d-3d2a4877b9d9";
       fsType = "btrfs";
-      options = [ "subvol=@" ];
+      options = [ "subvol=@" "compress=zstd:1" "noatime" ];
     };
 
   swapDevices = [ ];
