@@ -10,7 +10,6 @@
     eza
     fzf
     git
-    helix
     nmap
     rsync
     screen
