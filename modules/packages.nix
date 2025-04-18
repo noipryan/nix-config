@@ -46,6 +46,7 @@
     openconnect
     openfortivpn
     papirus-icon-theme
+    peazip
     phinger-cursors
     python312
     qbittorrent
