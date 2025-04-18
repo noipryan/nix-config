@@ -1,7 +1,11 @@
 { config, lib, pkgs, pkgs-unstable, ... }:
 
 {
-
+  
+  # allow insecure packages 
+  nixpkgs.config.permittedInsecurePackages = [
+    "archiver-3.5.1"
+    ];
   # Install firefox.
   programs.firefox.enable = true;
 
