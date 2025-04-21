@@ -1,7 +1,7 @@
 { config, lib, pkgs, pkgs-unstable, ... }:
 
 {
-  
+
   # Install firefox.
   programs.firefox.enable = true;
 
@@ -73,6 +73,8 @@
   (with pkgs-unstable; [
     ansible
     ansible-lint
+    bruno
+    bruno-cli
     freerdp3
     remmina
     slack
