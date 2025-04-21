@@ -7,7 +7,7 @@
     isNormalUser = true;
     description = "Ryan Swain";
     hashedPassword = "$y$j9T$Ac5mXTfcqljUVP7sdEfdW/$8wXnl72czUwJad1HveR0VzzI/7A2cXZa7ocjfHhCoBA";
-    extraGroups = [ "networkmanager" "wheel" "audio" "input" "libvirtd" "video" ];
+    extraGroups = [ "audio" "docker" "input" "libvirtd" "networkmanager" "video" "wheel" ];
     packages = with pkgs; [
       #  thunderbird
     ];
