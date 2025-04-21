@@ -10,9 +10,9 @@
       ./hardware-configuration.nix
     ];
 
-  # Enable experimental features 
-  nix.settings.experimental-features = [ "nix-command" "flakes" ]; 
- 
+  # Enable experimental features
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+
   # Use the GRUB 2 boot loader.
   boot.loader.grub.enable = true;
   # boot.loader.grub.efiSupport = true;
@@ -22,7 +22,7 @@
   # boot.loader.grub.device = "/dev/sda"; # or "nodev" for efi only
   boot.loader.grub.device = "/dev/vda";
 
-  networking.hostName = "nixos-bios"; # Define your hostname.
+  networking.hostName = "nixos-test"; # Define your hostname.
   # Pick only one of the below networking options.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
   # networking.networkmanager.enable = true;  # Easiest to use and most distros use this by default.
@@ -46,7 +46,7 @@
   # services.xserver.enable = true;
 
 
-  
+
 
   # Configure keymap in X11
   # services.xserver.xkb.layout = "us";
@@ -66,18 +66,18 @@
   # Enable touchpad support (enabled default in most desktopManager).
   # services.libinput.enable = true;
 
-  # Enable ZSH 
-  programs.zsh.enable = true; 
+  # Enable ZSH
+  programs.zsh.enable = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.swainrl = { 
-     isNormalUser = true; 
-     description = "Ryan"; 
-     extraGroups = [ "networkmanager" "wheel" "audio" "input" "video" ]; 
-     packages = with pkgs; [ 
-     #  thunderbird 
-     ]; 
-     shell = pkgs.zsh; 
+  users.users.swainrl = {
+     isNormalUser = true;
+     description = "Ryan";
+     extraGroups = [ "networkmanager" "wheel" "audio" "input" "video" ];
+     packages = with pkgs; [
+     #  thunderbird
+     ];
+     shell = pkgs.zsh;
    };
   # users.users.alice = {
   #   isNormalUser = true;
@@ -140,4 +140,3 @@
   system.stateVersion = "24.11"; # Did you read the comment?
 
 }
-
