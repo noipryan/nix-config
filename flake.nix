@@ -84,10 +84,10 @@
       specialArgs = { inherit pkgs-unstable; };
       };
 
-      nixosConfigurations.nixos-bios = nixpkgs.lib.nixosSystem {
+      nixosConfigurations.nixos-test = nixpkgs.lib.nixosSystem {
         inherit pkgs;
         modules = [
-          ./hosts/nixos-bios/configuration.nix
+          ./hosts/nixos-test/configuration.nix
         ];
       specialArgs = { inherit pkgs-unstable; };
       };
