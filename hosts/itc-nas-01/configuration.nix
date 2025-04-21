@@ -15,6 +15,7 @@
       ../../modules/server.nix
       ../../modules/fonts.nix
       ../../modules/zsh.nix
+      ../../services/docker.nix
     ];
 
   # Enable experimental features
