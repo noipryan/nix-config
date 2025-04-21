@@ -7,7 +7,7 @@
   # $ nix search wget
   environment.systemPackages = (with pkgs; [
     zsh
-  ];
+  ]);
 
   # Set ZSH to be the default shell on the system
   users.defaultUserShell=pkgs.zsh;
