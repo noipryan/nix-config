@@ -16,6 +16,8 @@
     ark
     bat
     brave
+    bruno
+    bruno-cli
     curl
     diffuse
     dig
@@ -73,8 +75,6 @@
   (with pkgs-unstable; [
     ansible
     ansible-lint
-    bruno
-    bruno-cli
     freerdp3
     remmina
     slack
