@@ -20,6 +20,8 @@
       ../../modules/zsh.nix
     ];
 
+  services.x2goserver.enable = true;
+
   # Enable experimental features
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
