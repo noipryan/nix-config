@@ -9,7 +9,7 @@
   ];
 
   services.xrdp.enable = true;
-  services.xrdp.defaultWindowManager = "xfce4-session";
-  #services.xrdp.openFirewall = true;
+  services.xrdp.defaultWindowManager = "startxfce4-session";
+  services.xrdp.openFirewall = true;
 
 }
