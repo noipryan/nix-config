@@ -12,7 +12,7 @@
   ];
 
   # Enable VMware guest modules
-  virtualisation.vmware.guest.enable = true;
+  virtualization.vmware.guest.enable = true;
 
   hardware.graphics.enable = true;
 
