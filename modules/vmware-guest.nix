@@ -14,6 +14,6 @@
   # Enable VMware guest modules
   virtualisation.vmware.guest.enable = true;
 
-  hardware.graphics.enable = true;
-
+  #hardware.graphics.enable = true;
+  services.xserver.videoDrivers = [ "vmware" ];
 }
