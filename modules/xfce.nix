@@ -18,7 +18,7 @@
     };
   };
   services.displayManager.defaultSession = "xfce";
-  ...
+
 }
 
   environment.systemPackages = [
