@@ -21,9 +21,9 @@
 
 }
 
-  environment.systemPackages = [
+environment.systemPackages = (with pkgs; [
     xfce.xfce4-whiskermenu-plugin
-    ];
+    ]);
 
   # Configure keymap in X11
   services.xserver.xkb = {
