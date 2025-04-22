@@ -14,6 +14,7 @@
       ../../modules/localization.nix
       ../../modules/packages.nix
       ../../modules/sddm.nix
+      ../../modules/vmware-guest.nix
       ../../modules/xfce.nix
       ../../modules/xrdp.nix
       ../../modules/zsh.nix
@@ -30,9 +31,6 @@
   # Pick only one of the below networking options.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
   networking.networkmanager.enable = true;  # Easiest to use and most distros use this by default.
-
-  # Enable VMware guest modu
-  virtualisation.vmware.guest.enable = true;
 
   # List services that you want to enable:
 
