@@ -91,6 +91,15 @@
         ];
       specialArgs = { inherit pkgs-unstable; };
       };
+
+      nixosConfigurations.itcmanage06 = nixpkgs.lib.nixosSystem {
+        inherit pkgs;
+        modules = [
+          ./hosts/itcmanage06/configuration.nix
+        ];
+      specialArgs = { inherit pkgs-unstable; };
+      };
+
       homeConfigurations = {
         name = home-manager.lib.homeManagerConfiguration {
           inherit pkgs;
