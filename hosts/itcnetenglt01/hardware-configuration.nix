@@ -16,7 +16,7 @@
   fileSystems."/" =
     { device = "/dev/disk/by-uuid/1d3cbabd-31c4-4938-8ed3-ff94e5472128";
       fsType = "btrfs";
-      options = [ "subvol=@" "compress=zstd:1" "noatime" ];
+        options = [ "subvol=@" "compress=zstd:1" "noatime" ];
     };
 
   boot.initrd.luks.devices."nixos-root".device = "/dev/disk/by-uuid/2834964c-855b-45f8-80df-d2bd60d7091f";
