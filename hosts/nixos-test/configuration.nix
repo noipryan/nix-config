@@ -16,6 +16,7 @@
       ../../modules/packages.nix
       ../../modules/sddm.nix
       ../../modules/xfce.nix
+      ../../modules/xrdp.nix
       ../../modules/zsh.nix
     ];
 
