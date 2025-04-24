@@ -100,7 +100,7 @@
       specialArgs = { inherit pkgs-unstable; };
       };
 
-      nixosConfigurations.itzenbook02 = nixpkgs.lib.nixosSystem {
+      nixosConfigurations.itczenbook02 = nixpkgs.lib.nixosSystem {
         inherit pkgs;
         modules = [
           ./hosts/itczenbook02/configuration.nix
