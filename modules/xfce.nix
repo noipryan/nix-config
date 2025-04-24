@@ -17,7 +17,7 @@
       xfce.enable = true;
     };
   };
-  services.displayManager.defaultSession = "xfce";
+#  services.displayManager.defaultSession = "xfce";
 
   environment.systemPackages = (with pkgs; [
     xfce.xfce4-whiskermenu-plugin
@@ -67,5 +67,5 @@
   };
 
   # Enable touchpad support (enabled default in most desktopManager).
-  # services.xserver.libinput.enable = true;
+  services.libinput.enable = true;
 }

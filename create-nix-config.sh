@@ -17,6 +17,9 @@ NIX_CONFIG="/mnt/etc/nixos/configuration.nix"
 NIX_HARDWARE="/mnt/etc/nixos/hardware-configuration.nix"
 NIX_CONFIG_DIR="/root/nix-config/hosts/${NIX_HOSTNAME}"
 
+git config user.name "Ryan"
+git config user.email "ryan@starflyer.dev"
+
 # Generate a new config
 nixos-generate-config --force --root /mnt
 
