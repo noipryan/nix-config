@@ -20,6 +20,7 @@
 #  services.displayManager.defaultSession = "xfce";
 
   environment.systemPackages = (with pkgs; [
+    i3
     xfce.xfce4-whiskermenu-plugin
     ]);
 
