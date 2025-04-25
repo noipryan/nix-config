@@ -10,21 +10,17 @@
 
   # Enable the Cinnamon Desktop Environment.
   # services.xserver.displayManager.lightdm.enable = true;
-services.xserver.windowManager.i3.enable = true;
-services.xserver.desktopManager = {
-  xterm.enable = false;
-  xfce = {
+  services.xserver = {
     enable = true;
-    noDesktop = true;
-    enableXfwm = false;
+    desktopManager = {
+      xterm.enable = false;
+      xfce.enable = true;
+    };
   };
-};
-
-services.displayManager.defaultSession = "xfce+i3";
-
-
+#  services.displayManager.defaultSession = "xfce";
 
   environment.systemPackages = (with pkgs; [
+    i3
     xfce.xfce4-whiskermenu-plugin
     ]);
 
@@ -72,5 +68,5 @@ services.displayManager.defaultSession = "xfce+i3";
   };
 
   # Enable touchpad support (enabled default in most desktopManager).
-  # services.xserver.libinput.enable = true;
+  services.libinput.enable = true;
 }
