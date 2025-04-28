@@ -11,14 +11,16 @@
       ../../users/swainrl.nix
       ../../modules/env.nix
       ../../modules/fonts.nix
-      ../../modules/kvm-guest.nix
       ../../modules/localization.nix
       ../../modules/packages.nix
       ../../modules/sddm.nix
+      ../../modules/vmware-guest.nix
       ../../modules/i3-xfce.nix
       ../../modules/xrdp.nix
       ../../modules/zsh.nix
     ];
+
+  services.x2goserver.enable = true;
 
   # Enable experimental features
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
@@ -27,12 +29,12 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  networking.hostName = "nixos-test"; # Define your hostname.
+  networking.hostName = "itcmanage06"; # Define your hostname.
   # Pick only one of the below networking options.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
   networking.networkmanager.enable = true;  # Easiest to use and most distros use this by default.
 
-    # List services that you want to enable:
+  # List services that you want to enable:
 
   # Enable the OpenSSH daemon.
   services.openssh.enable = true;

@@ -1,7 +1,7 @@
 { config, lib, pkgs, pkgs-unstable, ... }:
 
 {
-  
+
   # Install firefox.
   programs.firefox.enable = true;
 
@@ -16,6 +16,8 @@
     ark
     bat
     brave
+    bruno
+    bruno-cli
     curl
     diffuse
     dig
@@ -44,6 +46,8 @@
     nixos-artwork.wallpapers.simple-blue
     nmap
     nodejs_23
+    obsidian
+    okular
     openconnect
     openfortivpn
     papirus-icon-theme

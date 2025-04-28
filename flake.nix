@@ -84,13 +84,30 @@
       specialArgs = { inherit pkgs-unstable; };
       };
 
-      nixosConfigurations.nixos-bios = nixpkgs.lib.nixosSystem {
+      nixosConfigurations.nixos-test = nixpkgs.lib.nixosSystem {
         inherit pkgs;
         modules = [
-          ./hosts/nixos-bios/configuration.nix
+          ./hosts/nixos-test/configuration.nix
         ];
       specialArgs = { inherit pkgs-unstable; };
       };
+
+      nixosConfigurations.itcmanage06 = nixpkgs.lib.nixosSystem {
+        inherit pkgs;
+        modules = [
+          ./hosts/itcmanage06/configuration.nix
+        ];
+      specialArgs = { inherit pkgs-unstable; };
+      };
+
+      nixosConfigurations.itczenbook02 = nixpkgs.lib.nixosSystem {
+        inherit pkgs;
+        modules = [
+          ./hosts/itczenbook02/configuration.nix
+        ];
+      specialArgs = { inherit pkgs-unstable; };
+      };
+
       homeConfigurations = {
         name = home-manager.lib.homeManagerConfiguration {
           inherit pkgs;

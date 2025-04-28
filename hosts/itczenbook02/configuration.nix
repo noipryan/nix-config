@@ -11,12 +11,12 @@
       ../../users/swainrl.nix
       ../../modules/env.nix
       ../../modules/fonts.nix
-      ../../modules/kvm-guest.nix
+      ../../modules/kvm.nix
       ../../modules/localization.nix
       ../../modules/packages.nix
       ../../modules/sddm.nix
-      ../../modules/i3-xfce.nix
-      ../../modules/xrdp.nix
+      ../../modules/sway.nix
+      ../../modules/tailscale.nix
       ../../modules/zsh.nix
     ];
 
@@ -27,12 +27,13 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  networking.hostName = "nixos-test"; # Define your hostname.
+  networking.hostName = "itczenbook02"; # Define your hostname.
   # Pick only one of the below networking options.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
   networking.networkmanager.enable = true;  # Easiest to use and most distros use this by default.
+  networking.networkmanager.wifi.backend = "iwd";
 
-    # List services that you want to enable:
+  # List services that you want to enable:
 
   # Enable the OpenSSH daemon.
   services.openssh.enable = true;

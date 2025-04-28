@@ -4,43 +4,39 @@
 { config, lib, pkgs, modulesPath, ... }:
 
 {
-  imports =
-    [ (modulesPath + "/installer/scan/not-detected.nix")
-    ];
+  imports = [ ];
 
-  boot.initrd.availableKernelModules = [ "nvme" "xhci_pci" "thunderbolt" "usb_storage" "sd_mod" ];
+  boot.initrd.availableKernelModules = [ "ata_piix" "vmw_pvscsi" "sd_mod" "sr_mod" ];
   boot.initrd.kernelModules = [ ];
-  boot.kernelModules = [ "kvm-amd" ];
+  boot.kernelModules = [ ];
   boot.extraModulePackages = [ ];
 
   fileSystems."/" =
-    { device = "/dev/disk/by-uuid/1d3cbabd-31c4-4938-8ed3-ff94e5472128";
+    { device = "/dev/disk/by-uuid/5a820b36-c31d-4000-9b2f-56ed1d614ab4";
       fsType = "btrfs";
-        options = [ "subvol=@" "compress=zstd:1" "noatime" ];
+      options = [ "subvol=@" "compress=zstd:1" "noatime" ];
     };
 
-  boot.initrd.luks.devices."nixos-root".device = "/dev/disk/by-uuid/2834964c-855b-45f8-80df-d2bd60d7091f";
-
   fileSystems."/boot" =
-    { device = "/dev/disk/by-uuid/3BD5-E44D";
+    { device = "/dev/disk/by-uuid/BC21-3FA0";
       fsType = "vfat";
       options = [ "fmask=0022" "dmask=0022" ];
     };
 
   fileSystems."/home" =
-    { device = "/dev/disk/by-uuid/1d3cbabd-31c4-4938-8ed3-ff94e5472128";
+    { device = "/dev/disk/by-uuid/5a820b36-c31d-4000-9b2f-56ed1d614ab4";
       fsType = "btrfs";
       options = [ "subvol=@home" "compress=zstd:1" ];
     };
 
   fileSystems."/nix" =
-    { device = "/dev/disk/by-uuid/1d3cbabd-31c4-4938-8ed3-ff94e5472128";
+    { device = "/dev/disk/by-uuid/5a820b36-c31d-4000-9b2f-56ed1d614ab4";
       fsType = "btrfs";
       options = [ "subvol=@" "compress=zstd:1" "noatime" ];
     };
 
   fileSystems."/var/log" =
-    { device = "/dev/disk/by-uuid/1d3cbabd-31c4-4938-8ed3-ff94e5472128";
+    { device = "/dev/disk/by-uuid/5a820b36-c31d-4000-9b2f-56ed1d614ab4";
       fsType = "btrfs";
       options = [ "subvol=@" "compress=zstd:1" "noatime" ];
     };
@@ -52,9 +48,7 @@
   # still possible to use this option, but it's recommended to use it in conjunction
   # with explicit per-interface declarations with `networking.interfaces.<interface>.useDHCP`.
   networking.useDHCP = lib.mkDefault true;
-  # networking.interfaces.enp3s0f0.useDHCP = lib.mkDefault true;
-  # networking.interfaces.wlp1s0.useDHCP = lib.mkDefault true;
+  # networking.interfaces.ens192.useDHCP = lib.mkDefault true;
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
-  hardware.cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
 }
