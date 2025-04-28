@@ -17,6 +17,7 @@
       ../../modules/sddm.nix
       ../../modules/sway.nix
       ../../modules/tailscale.nix
+      ../../modules/tlp.nix
       ../../modules/zsh.nix
     ];
 
