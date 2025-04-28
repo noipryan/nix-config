@@ -20,7 +20,10 @@
 #  services.displayManager.defaultSession = "xfce";
 
   environment.systemPackages = (with pkgs; [
+    feh
+    i3
     xfce.xfce4-whiskermenu-plugin
+    xfce.xfce4-i3-workspaces-plugin
     ]);
 
   # Configure keymap in X11

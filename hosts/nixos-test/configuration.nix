@@ -15,7 +15,7 @@
       ../../modules/localization.nix
       ../../modules/packages.nix
       ../../modules/sddm.nix
-      ../../modules/xfce.nix
+      ../../modules/i3-xfce.nix
       ../../modules/xrdp.nix
       ../../modules/zsh.nix
     ];
