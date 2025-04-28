@@ -46,6 +46,7 @@
     nixos-artwork.wallpapers.simple-blue
     nmap
     nodejs_23
+    obsidian
     okular
     openconnect
     openfortivpn
