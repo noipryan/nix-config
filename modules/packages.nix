@@ -52,8 +52,6 @@
     openfortivpn
     papirus-icon-theme
     phinger-cursors
-    python312
-    python312Packages.netaddr
     qbittorrent
     rsync
     screen
