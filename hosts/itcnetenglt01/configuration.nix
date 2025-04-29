@@ -14,7 +14,7 @@
       ../../modules/kvm.nix
       ../../modules/localization.nix
       ../../modules/packages.nix
-      ../../modules/python.nix
+      ../../modules/pythonPackages.nix
       ../../modules/sddm.nix
       ../../modules/sway.nix
       ../../modules/tailscale.nix

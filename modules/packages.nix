@@ -52,6 +52,7 @@
     openfortivpn
     papirus-icon-theme
     phinger-cursors
+    python312
     qbittorrent
     rsync
     screen

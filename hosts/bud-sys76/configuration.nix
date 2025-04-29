@@ -13,20 +13,21 @@
       ../../modules/env.nix
       ../../modules/system76.nix
       ../../modules/packages.nix
+      ../../modules/pythonPackages.nix
       ../../modules/sway.nix
       ../../modules/sddm.nix
       ../../modules/fonts.nix
     ];
 
-  # Enable experimental features 
-  nix.settings.experimental-features = [ "nix-command" "flakes" ]; 
- 
+  # Enable experimental features
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
   networking.hostName = "bud-sys76"; # Define your hostname.
-  
+
   networking.networkmanager.enable = true;
 
   services.openssh.enable = true;
@@ -62,4 +63,3 @@
   system.stateVersion = "24.11"; # Did you read the comment?
 
 }
-

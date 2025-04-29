@@ -13,6 +13,7 @@
       ../../modules/fonts.nix
       ../../modules/localization.nix
       ../../modules/packages.nix
+      ../../modules/pythonPackages.nix
       ../../modules/sddm.nix
       ../../modules/vmware-guest.nix
       ../../modules/i3-xfce.nix
