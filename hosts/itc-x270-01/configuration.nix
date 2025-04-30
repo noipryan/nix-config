@@ -10,6 +10,18 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
+      ../../users/swainrl.nix
+      ../../modules/env.nix
+      ../../modules/fonts.nix
+      ../../modules/kvm.nix
+      ../../modules/localization.nix
+      ../../modules/packages.nix
+      ../../modules/pythonPackages.nix
+      ../../modules/sddm.nix
+      ../../modules/sway.nix
+      ../../modules/tailscale.nix
+      ../../modules/tlp.nix
+      ../../modules/zsh.nix
     ];
 
   # Allow unfree packages
@@ -29,7 +41,7 @@
 
   #networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
   # networking.wireless.userControlled.enable = true;
-  # networking.wireless.allowAuxiliaryImperativeNetworks = true; 
+  # networking.wireless.allowAuxiliaryImperativeNetworks = true;
   # systemd.services.wpa_supplicant.environment.OPENSSL_CONF = pkgs.writeText "openssl.cnf" ''
   #   openssl_conf = openssl_init
   #   [openssl_init]
