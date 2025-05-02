@@ -68,6 +68,7 @@
     wireshark
     yad
     yamllint
+    yaru-remix-theme
     zoxide
     zsh
   ])
